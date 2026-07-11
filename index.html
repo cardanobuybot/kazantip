@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kaZantip — Республика Щастья Z</title>
+<meta name="description" content="kaZantip — легендарная Оранжевая Республика Z. История фестиваля, жёлтый чемоданчик, конституция счастья, легендарные диджеи. Мы верим, что Казантип возродится.">
+<meta property="og:title" content="kaZantip — Республика Щастья Z">
+<meta property="og:description" content="История легендарного фестиваля: жёлтый чемоданчик, виZы вместо билетов, право на Щастье. Однажды Z вернётся.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='15' y='30' width='70' height='50' rx='8' fill='%23FFD400' stroke='%23111' stroke-width='4'/><rect x='38' y='18' width='24' height='14' rx='6' fill='none' stroke='%23111' stroke-width='4'/><text x='50' y='66' font-size='34' font-weight='bold' text-anchor='middle' fill='%23111'>Z</text></svg>">
+<style>
+  :root {
+    --yellow: #FFD400;
+    --orange: #FF7A00;
+    --black: #0d0d0d;
+    --dark: #161616;
+    --cream: #fff8e1;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--yellow); color: var(--black); }
+
+  /* ---------- NAV ---------- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 24px;
+    background: rgba(13,13,13,.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--yellow);
+  }
+  nav .logo {
+    font-size: 1.3rem; font-weight: 800; letter-spacing: 1px;
+    color: var(--yellow); text-decoration: none;
+  }
+  nav .logo span { color: var(--orange); font-size: 1.6rem; }
+  nav ul { display: flex; gap: 20px; list-style: none; }
+  nav a { color: var(--cream); text-decoration: none; font-size: .9rem; transition: color .2s; }
+  nav a:hover { color: var(--yellow); }
+  @media (max-width: 720px) { nav ul { display: none; } }
+
+  /* ---------- HERO ---------- */
+  header {
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 100px 20px 60px;
+    background:
+      radial-gradient(circle at 50% 120%, rgba(255,122,0,.25), transparent 60%),
+      radial-gradient(circle at 20% 20%, rgba(255,212,0,.08), transparent 40%),
+      var(--black);
+  }
+  /* polka dots overlay */
+  header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,212,0,.07) 6px, transparent 7px);
+    background-size: 90px 90px;
+    pointer-events: none;
+  }
+
+  /* ---------- SUITCASE ---------- */
+  .suitcase-wrap { animation: float 4s ease-in-out infinite; margin-bottom: 30px; }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-18px) rotate(2deg); }
+  }
+  .suitcase { width: 220px; height: auto; filter: drop-shadow(0 20px 40px rgba(255,212,0,.35)); }
+
+  h1 {
+    font-size: clamp(3rem, 10vw, 6.5rem);
+    font-weight: 900; letter-spacing: 2px;
+    color: var(--yellow);
+    text-shadow: 4px 4px 0 var(--orange), 8px 8px 0 rgba(0,0,0,.5);
+  }
+  h1 .z { color: var(--orange); font-size: 1.2em; text-shadow: 4px 4px 0 var(--yellow), 8px 8px 0 rgba(0,0,0,.5); }
+  .tagline {
+    margin-top: 18px; font-size: clamp(1rem, 3vw, 1.4rem);
+    color: var(--cream); opacity: .9; max-width: 650px;
+  }
+  .tagline b { color: var(--yellow); }
+  .hero-badges { margin-top: 34px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .badge {
+    border: 2px solid var(--yellow); border-radius: 999px;
+    padding: 8px 20px; font-size: .85rem; color: var(--yellow);
+    background: rgba(255,212,0,.06);
+  }
+  .scroll-hint { position: absolute; bottom: 24px; font-size: 1.6rem; color: var(--yellow); animation: bounce 1.6s infinite; }
+  @keyframes bounce { 0%,100% { transform: translateY(0);} 50% { transform: translateY(10px);} }
+
+  /* ---------- SECTIONS ---------- */
+  section { max-width: 960px; margin: 0 auto; padding: 90px 24px; position: relative; }
+  h2 {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    color: var(--yellow); margin-bottom: 28px; font-weight: 800;
+  }
+  h2::after {
+    content: ''; display: block; width: 80px; height: 5px;
+    background: var(--orange); margin-top: 10px; border-radius: 3px;
+  }
+  p + p { margin-top: 16px; }
+  .accent { color: var(--yellow); font-weight: 600; }
+  .card {
+    background: var(--dark); border: 1px solid rgba(255,212,0,.2);
+    border-radius: 18px; padding: 28px; margin-top: 24px;
+  }
+
+  /* constitution list */
+  .rights { list-style: none; margin-top: 20px; display: grid; gap: 14px; }
+  .rights li {
+    background: var(--dark); border-left: 5px solid var(--yellow);
+    padding: 16px 20px; border-radius: 0 12px 12px 0; font-size: 1.05rem;
+  }
+  .rights li b { color: var(--orange); }
+
+  /* DJs */
+  .djs { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .dj {
+    padding: 10px 20px; border-radius: 999px;
+    background: linear-gradient(135deg, rgba(255,212,0,.12), rgba(255,122,0,.12));
+    border: 1px solid rgba(255,212,0,.35);
+    font-size: .95rem; color: var(--cream);
+    transition: transform .2s, background .2s;
+  }
+  .dj:hover { transform: scale(1.08) rotate(-2deg); background: var(--yellow); color: var(--black); }
+
+  /* timeline */
+  .timeline { margin-top: 30px; border-left: 3px solid var(--yellow); padding-left: 28px; display: grid; gap: 28px; }
+  .tl-item { position: relative; }
+  .tl-item::before {
+    content: ''; position: absolute; left: -37px; top: 6px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--orange); border: 3px solid var(--yellow);
+  }
+  .tl-item .year { font-size: 1.3rem; font-weight: 800; color: var(--yellow); }
+
+  /* stats */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin-top: 30px; }
+  .stat {
+    background: var(--dark); border: 1px solid rgba(255,122,0,.3);
+    border-radius: 16px; padding: 26px 18px; text-align: center;
+  }
+  .stat .num { font-size: 2.4rem; font-weight: 900; color: var(--yellow); }
+  .stat .lbl { font-size: .85rem; opacity: .8; margin-top: 6px; }
+
+  /* hope section */
+  .hope {
+    text-align: center;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(255,212,0,.15), transparent 60%),
+      var(--dark);
+    border-radius: 24px; border: 2px dashed var(--yellow);
+    padding: 60px 30px !important; max-width: 900px;
+  }
+  .hope h2::after { margin-left: auto; margin-right: auto; }
+  .hope .big {
+    font-size: clamp(1.3rem, 4vw, 2rem); color: var(--yellow);
+    font-weight: 800; margin-top: 20px;
+  }
+
+  footer {
+    text-align: center; padding: 40px 20px 60px;
+    font-size: .85rem; opacity: .6;
+  }
+  footer .z { color: var(--orange); font-weight: 800; }
+
+  .quote {
+    font-style: italic; font-size: 1.15rem; color: var(--yellow);
+    border-left: 4px solid var(--orange); padding: 10px 22px; margin: 26px 0;
+    background: rgba(255,122,0,.06); border-radius: 0 12px 12px 0;
+  }
+
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s, transform .7s; }
+  .reveal.on { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#">ka<span>Z</span>antip</a>
+  <ul>
+    <li><a href="#history">История</a></li>
+    <li><a href="#republic">Республика Z</a></li>
+    <li><a href="#suitcase">Чемоданчик</a></li>
+    <li><a href="#djs">Диджеи</a></li>
+    <li><a href="#timeline">Хронология</a></li>
+    <li><a href="#hope">Возрождение</a></li>
+  </ul>
+</nav>
+
+<header>
+  <div class="suitcase-wrap">
+    <svg class="suitcase" viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- handle -->
+      <rect x="88" y="18" width="64" height="34" rx="14" fill="none" stroke="#111" stroke-width="10"/>
+      <rect x="88" y="18" width="64" height="34" rx="14" fill="none" stroke="#FFD400" stroke-width="5"/>
+      <!-- body -->
+      <rect x="20" y="45" width="200" height="135" rx="18" fill="#FFD400" stroke="#111" stroke-width="6"/>
+      <!-- straps -->
+      <rect x="55" y="45" width="14" height="135" fill="#FF7A00"/>
+      <rect x="171" y="45" width="14" height="135" fill="#FF7A00"/>
+      <!-- latches -->
+      <rect x="52" y="38" width="20" height="16" rx="3" fill="#111"/>
+      <rect x="168" y="38" width="20" height="16" rx="3" fill="#111"/>
+      <!-- Z -->
+      <text x="120" y="138" font-size="64" font-weight="900" text-anchor="middle" fill="#111" font-family="Arial, sans-serif">Z</text>
+      <!-- polka dots -->
+      <circle cx="40" cy="65" r="5" fill="#111" opacity=".85"/>
+      <circle cx="205" cy="160" r="5" fill="#111" opacity=".85"/>
+      <circle cx="42" cy="160" r="5" fill="#111" opacity=".85"/>
+      <circle cx="200" cy="65" r="5" fill="#111" opacity=".85"/>
+    </svg>
+  </div>
+  <h1>ka<span class="z">Z</span>antip</h1>
+  <p class="tagline">Оранжевая Республика <b>Щастья</b>. Государство, которого нет на карте, — но оно навсегда осталось в сердцах сотен тысяч <b>параdiZеров</b>.</p>
+  <div class="hero-badges">
+    <span class="badge">☀️ 24 часа музыки в сутки</span>
+    <span class="badge">🛂 виZа вместо билета</span>
+    <span class="badge">💛 жёлтый чемоданчик = свободный вход</span>
+  </div>
+  <a class="scroll-hint" href="#history">▼</a>
+</header>
+
+<section id="history" class="reveal">
+  <h2>Как всё зародилось</h2>
+  <p>В 1984 году виндсёрфер <span class="accent">Никита Маршунок</span> открыл для себя мыс Казантип на северо-западе Крыма — место с идеальным ветром. В начале 90-х здесь стали проводить соревнования по виндсёрфингу, а вечеринки после гонок оказались настолько мощными, что быстро затмили сам спорт.</p>
+  <p>Датой рождения фестиваля считается <span class="accent">август 1993 года</span>. Самая легендарная страница ранней истории — рейвы в машинном зале <span class="accent">недостроенной Крымской атомной станции</span> в Щёлкино: «Реактор» стал самым необычным танцполом планеты, а Казантип — «атомной вечеринкой в ядерном реакторе».</p>
+  <div class="quote">Казантип начинался не как бизнес — как побег. Побег из обычной жизни в страну, где всё можно.</div>
+  <p>К концу 90-х фестиваль перерос спорт и превратился в крупнейший электронный опен-эйр Восточной Европы. С 2002 года Республика обосновалась в посёлке <span class="accent">Поповка</span> под Евпаторией — километры песчаного пляжа, десятки танцполов и белые фантастические конструкции прямо на берегу.</p>
+</section>
+
+<section id="republic" class="reveal">
+  <h2>Республика Z и её политика</h2>
+  <p>В 1999 году Казантип провозгласил себя <span class="accent">государством — Республикой Z</span> (она же «Республика Щастья», именно так, через «Щ»). Бессменным президентом стал Никита Маршунок. Вместо билетов — <span class="accent">виZы</span> (первые стоили всего $3), вместо посетителей — граждане, «параdiZеры».</p>
+  <div class="card">
+    <p><b style="color:var(--yellow)">Из Конституции Республики Z — права и обязанности гражданина:</b></p>
+    <ul class="rights">
+      <li><b>Право искать Щастье</b> — и обязанность его найти.</li>
+      <li><b>Право улетать от Щастья</b> — и мечтать о невозможном.</li>
+      <li><b>Обязанность верить в чудеса</b> — без этого виZу могут и не дать.</li>
+      <li><b>Государственный язык</b> — любой, на котором могут объясниться двое граждан: хоть жесты, хоть нотная грамота.</li>
+      <li><b>Государственные цвета</b> — жёлтый и оранжевый. После 2006 года оранжевый стал «оранжевым в чёрный горошек».</li>
+    </ul>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="num">100 000+</div><div class="lbl">граждан за сезон</div></div>
+    <div class="stat"><div class="num">300+</div><div class="lbl">диджеев каждый год</div></div>
+    <div class="stat"><div class="num">14</div><div class="lbl">танцполов</div></div>
+    <div class="stat"><div class="num">24/7</div><div class="lbl">музыка 2–3 недели подряд</div></div>
+  </div>
+</section>
+
+<section id="suitcase" class="reveal">
+  <h2>Жёлтый чемоданчик 💛</h2>
+  <p>Главный символ Республики родился из советского фильма <span class="accent">«Приключения жёлтого чемоданчика»</span>. По закону Z, гражданин, явившийся на границу Республики с <span class="accent">идеально жёлтым чемоданом</span>, получал право на бесплатный, безвиZовый вход.</p>
+  <p>Чемодан должен был быть безупречным: настоящий, жёлтый, без изъянов — комиссия проверяла строго. Тысячи людей красили, клеили и мастерили чемоданы, и каждый год очередь у КПП с жёлтыми чемоданчиками была отдельным перформансом.</p>
+  <div class="quote">Жёлтый чемоданчик — это не багаж. Это билет в детство, где чудеса ещё работают.</div>
+</section>
+
+<section id="djs" class="reveal">
+  <h2>Легендарные диджеи</h2>
+  <p>За два десятилетия на танцполах Z отыграли главные имена планеты — от техно-титанов до трансовых легенд:</p>
+  <div class="djs">
+    <span class="dj">Carl Cox</span>
+    <span class="dj">Armin van Buuren</span>
+    <span class="dj">Tiësto</span>
+    <span class="dj">David Guetta</span>
+    <span class="dj">Skrillex</span>
+    <span class="dj">Benny Benassi</span>
+    <span class="dj">Marco Carola</span>
+    <span class="dj">Josh Wink</span>
+    <span class="dj">Guy Gerber</span>
+    <span class="dj">Maceo Plex</span>
+    <span class="dj">Oliver Huntemann</span>
+    <span class="dj">Ferry Corsten</span>
+    <span class="dj">Markus Schulz</span>
+    <span class="dj">Gabriel & Dresden</span>
+    <span class="dj">Hybrid</span>
+    <span class="dj">Rusko</span>
+    <span class="dj">Adam Freeland</span>
+    <span class="dj">Bobina</span>
+  </div>
+  <p style="margin-top:24px">И это лишь верхушка: каждый сезон — сотни артистов, круглосуточные сеты и ни одной минуты тишины.</p>
+</section>
+
+<section id="timeline" class="reveal">
+  <h2>Хронология</h2>
+  <div class="timeline">
+    <div class="tl-item"><div class="year">1984</div><p>Никита Маршунок открывает мыс Казантип как виндсёрф-спот.</p></div>
+    <div class="tl-item"><div class="year">1993</div><p>Первый фестиваль: гонки виндсёрферов + афтепати, ставшие легендой.</p></div>
+    <div class="tl-item"><div class="year">1995–1999</div><p>Рейвы в реакторном зале недостроенной Крымской АЭС в Щёлкино.</p></div>
+    <div class="tl-item"><div class="year">1999</div><p>Провозглашена Республика Z: конституция, виZы, президент.</p></div>
+    <div class="tl-item"><div class="year">2002</div><p>Переезд в Поповку под Евпаторией — золотая эпоха Республики.</p></div>
+    <div class="tl-item"><div class="year">2013</div><p>Последний Казантип в Крыму. Больше 100 000 параdiZеров.</p></div>
+    <div class="tl-item"><div class="year">2014</div><p>После аннексии Крыма Республика эмигрирует в Анаклию (Грузия).</p></div>
+    <div class="tl-item"><div class="year">2015</div><p>Попытка провести Z в Камбодже (остров Кох Пуос) — отменена властями в последний момент.</p></div>
+    <div class="tl-item"><div class="year">Будущее</div><p>Республика спит. Но республики не умирают — они ждут.</p></div>
+  </div>
+</section>
+
+<section id="hope" class="hope reveal">
+  <h2>Мы верим в возрождение</h2>
+  <p>Казантип — это не место и не бренд. Это состояние, в котором незнакомые люди становятся гражданами одной страны, где обязательно верить в чудеса.</p>
+  <p class="big">Однажды жёлтый чемоданчик снова откроется.<br>И мы будем первыми в очереди на границе. Z ✌️</p>
+</section>
+
+<footer>
+  <p>kaZantip.org — фанатский сайт-посвящение Республике <span class="z">Z</span>. Сделано с 💛 параdiZером.</p>
+  <p style="margin-top:8px">Не является официальным сайтом фестиваля. Все права на бренд принадлежат их владельцам.</p>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
