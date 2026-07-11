@@ -82,11 +82,17 @@ tailwind.config = {
     <h2 class="font-black text-3xl sm:text-4xl text-amberz mb-2">The Dj Pashulja Rave</h2>
     <div class="h-1 w-20 bg-orangez rounded mb-10"></div>
     <div class="card-glow bg-panel rounded-3xl p-6 sm:p-8">
-      <p class="text-orangez uppercase tracking-widest text-xs font-bold mb-4">the first resident of Republic B</p>
-      <div class="rounded-2xl overflow-hidden" style="position:relative;padding-top:56.25%;">
-        <iframe src="https://www.youtube-nocookie.com/embed/4m1gf1Cok84" title="Dj Pashulja — Republic B rave" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      <div class="flex flex-col sm:flex-row gap-6 items-center">
+        <img src="/rave1.jpg" alt="Cover of 'Baltic Surf' — Dj Pashulja" class="w-40 h-40 rounded-2xl object-cover shrink-0 border border-amberz/30">
+        <div class="flex-1 w-full">
+          <p class="text-orangez uppercase tracking-widest text-xs font-bold">the first resident of Republic B</p>
+          <h3 class="font-black text-2xl text-amberz mt-1">Dj Pashulja — "Baltic Surf"</h3>
+          <audio controls preload="metadata" class="mt-4">
+            <source src="/rave1.mp3" type="audio/mpeg">
+            Your browser can't play mp3.
+          </audio>
+        </div>
       </div>
-      <p class="text-neutral-500 text-xs mt-4">Not playing? <a href="https://youtu.be/4m1gf1Cok84" target="_blank" rel="noopener" class="text-amberz/80 hover:text-amberz underline">Open on YouTube →</a></p>
     </div>
   </section>
 
@@ -135,19 +141,26 @@ tailwind.config = {
   let W,H; function fit(){ W=cv.width=innerWidth; H=cv.height=innerHeight; }
   fit(); addEventListener('resize', fit);
 
-  const audio = document.querySelector('audio');
-  let actx=null, analyser=null, freq=null;
-  function hookAudio(){
-    if(actx) { actx.resume(); return; }
+  const audios = Array.from(document.querySelectorAll('audio'));
+  let actx=null, freq=null;
+  const analysers = new Map();
+  function hookAudio(el){
     try{
-      actx = new (window.AudioContext||window.webkitAudioContext)();
-      const src = actx.createMediaElementSource(audio);
-      analyser = actx.createAnalyser(); analyser.fftSize = 256;
-      src.connect(analyser); analyser.connect(actx.destination);
-      freq = new Uint8Array(analyser.frequencyBinCount);
-    }catch(e){ analyser=null; }
+      if(!actx){ actx = new (window.AudioContext||window.webkitAudioContext)(); freq = new Uint8Array(128); }
+      actx.resume();
+      if(!analysers.has(el)){
+        const src = actx.createMediaElementSource(el);
+        const an = actx.createAnalyser(); an.fftSize = 256;
+        src.connect(an); an.connect(actx.destination);
+        analysers.set(el, an);
+      }
+    }catch(e){}
   }
-  audio.addEventListener('play', hookAudio);
+  audios.forEach(el=>el.addEventListener('play', ()=>{
+    hookAudio(el);
+    audios.forEach(o=>{ if(o!==el) o.pause(); });
+  }));
+  const playingEl = ()=> audios.find(a=>!a.paused) || null;
 
   const COLORS = ['#FFD400','#FF7A00','#00e5ff','#ff2bd6','#7CFF6B'];
   const beams = [];
@@ -163,8 +176,10 @@ tailwind.config = {
 
   let t=0;
   function bass(){
-    if(!analyser || audio.paused) return 0;
-    analyser.getByteFrequencyData(freq);
+    const el = playingEl();
+    const an = el && analysers.get(el);
+    if(!an) return 0;
+    an.getByteFrequencyData(freq);
     let s=0; for(let i=0;i<10;i++) s+=freq[i];
     return s/2550;
   }
@@ -173,7 +188,7 @@ tailwind.config = {
     requestAnimationFrame(draw);
     t += 0.016;
     ctx.clearRect(0,0,W,H);
-    const playing = audio && !audio.paused;
+    const playing = !!playingEl();
     const b = bass();
     const energy = playing ? 0.55 + b*1.6 : 0.18;
     ctx.globalCompositeOperation = 'lighter';
