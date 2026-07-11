@@ -24,4 +24,16 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://kazantip.org/anthems/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kazantip.org/en/anthems/"/>
   </url>
+  <url>
+    <loc>https://kazantip.org/government/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kazantip.org/government/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kazantip.org/en/government/"/>
+  </url>
+  <url>
+    <loc>https://kazantip.org/en/government/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kazantip.org/government/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kazantip.org/en/government/"/>
+  </url>
 </urlset>
