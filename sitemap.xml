@@ -48,4 +48,16 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://kazantip.org/chemodan/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kazantip.org/en/chemodan/"/>
   </url>
+  <url>
+    <loc>https://kazantip.org/baltic/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kazantip.org/baltic/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kazantip.org/en/baltic/"/>
+  </url>
+  <url>
+    <loc>https://kazantip.org/en/baltic/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kazantip.org/baltic/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kazantip.org/en/baltic/"/>
+  </url>
 </urlset>
