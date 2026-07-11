@@ -36,4 +36,16 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://kazantip.org/government/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kazantip.org/en/government/"/>
   </url>
+  <url>
+    <loc>https://kazantip.org/chemodan/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kazantip.org/chemodan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kazantip.org/en/chemodan/"/>
+  </url>
+  <url>
+    <loc>https://kazantip.org/en/chemodan/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kazantip.org/chemodan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kazantip.org/en/chemodan/"/>
+  </url>
 </urlset>
