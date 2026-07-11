@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>kaZantip — Республика Щастья Z</title>
-<meta name="description" content="kaZantip — легендарная Оранжевая Республика Z. История фестиваля, жёлтый чемоданчик, конституция счастья, легендарные диджеи. Мы верим, что Казантип возродится.">
-<meta property="og:title" content="kaZantip — Республика Щастья Z">
-<meta property="og:description" content="История легендарного фестиваля: жёлтый чемоданчик, виZы вместо билетов, право на Щастье. Однажды Z вернётся.">
+<title>kaZantip — Republic of Happiness Z</title>
+<meta name="description" content="kaZantip — the legendary Orange Republic Z. The story of the festival, the yellow suitcase, the constitution of happiness, the legendary DJs. We believe kaZantip will rise again.">
+<meta property="og:title" content="kaZantip — Republic of Happiness Z">
+<meta property="og:description" content="The story of a legendary festival: the yellow suitcase, viZas instead of tickets, the right to Happiness. One day Z will return.">
 <meta property="og:type" content="website">
 <link rel="alternate" hreflang="ru" href="https://kazantip.org/">
 <link rel="alternate" hreflang="en" href="https://kazantip.org/en/">
@@ -67,7 +67,6 @@
       radial-gradient(circle at 20% 20%, rgba(255,212,0,.08), transparent 40%),
       var(--black);
   }
-  /* polka dots overlay */
   header::before {
     content: '';
     position: absolute; inset: 0;
@@ -122,7 +121,6 @@
     border-radius: 18px; padding: 28px; margin-top: 24px;
   }
 
-  /* constitution list */
   .rights { list-style: none; margin-top: 20px; display: grid; gap: 14px; }
   .rights li {
     background: var(--dark); border-left: 5px solid var(--yellow);
@@ -130,7 +128,6 @@
   }
   .rights li b { color: var(--orange); }
 
-  /* DJs */
   .djs { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
   .dj {
     padding: 10px 20px; border-radius: 999px;
@@ -141,7 +138,6 @@
   }
   .dj:hover { transform: scale(1.08) rotate(-2deg); background: var(--yellow); color: var(--black); }
 
-  /* timeline */
   .timeline { margin-top: 30px; border-left: 3px solid var(--yellow); padding-left: 28px; display: grid; gap: 28px; }
   .tl-item { position: relative; }
   .tl-item::before {
@@ -151,7 +147,6 @@
   }
   .tl-item .year { font-size: 1.3rem; font-weight: 800; color: var(--yellow); }
 
-  /* stats */
   .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin-top: 30px; }
   .stat {
     background: var(--dark); border: 1px solid rgba(255,122,0,.3);
@@ -160,7 +155,6 @@
   .stat .num { font-size: 2.4rem; font-weight: 900; color: var(--yellow); }
   .stat .lbl { font-size: .85rem; opacity: .8; margin-top: 6px; }
 
-  /* hope section */
   .hope {
     text-align: center;
     background:
@@ -196,33 +190,27 @@
 <nav>
   <a class="logo" href="#">ka<span>Z</span>antip</a>
   <ul>
-    <li><a href="#history">История</a></li>
-    <li><a href="#republic">Республика Z</a></li>
-    <li><a href="#suitcase">Чемоданчик</a></li>
-    <li><a href="#djs">Диджеи</a></li>
-    <li><a href="#timeline">Хронология</a></li>
-    <li><a href="#hope">Возрождение</a></li>
-    <li class="lang-li"><a class="lang" href="/en/">EN</a></li>
+    <li><a href="#history">History</a></li>
+    <li><a href="#republic">Republic Z</a></li>
+    <li><a href="#suitcase">The Suitcase</a></li>
+    <li><a href="#djs">DJs</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#hope">Rebirth</a></li>
+    <li class="lang-li"><a class="lang" href="/">RU</a></li>
   </ul>
 </nav>
 
 <header>
   <div class="suitcase-wrap">
     <svg class="suitcase" viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
-      <!-- handle -->
       <rect x="88" y="18" width="64" height="34" rx="14" fill="none" stroke="#111" stroke-width="10"/>
       <rect x="88" y="18" width="64" height="34" rx="14" fill="none" stroke="#FFD400" stroke-width="5"/>
-      <!-- body -->
       <rect x="20" y="45" width="200" height="135" rx="18" fill="#FFD400" stroke="#111" stroke-width="6"/>
-      <!-- straps -->
       <rect x="55" y="45" width="14" height="135" fill="#FF7A00"/>
       <rect x="171" y="45" width="14" height="135" fill="#FF7A00"/>
-      <!-- latches -->
       <rect x="52" y="38" width="20" height="16" rx="3" fill="#111"/>
       <rect x="168" y="38" width="20" height="16" rx="3" fill="#111"/>
-      <!-- Z -->
       <text x="120" y="138" font-size="64" font-weight="900" text-anchor="middle" fill="#111" font-family="Arial, sans-serif">Z</text>
-      <!-- polka dots -->
       <circle cx="40" cy="65" r="5" fill="#111" opacity=".85"/>
       <circle cx="205" cy="160" r="5" fill="#111" opacity=".85"/>
       <circle cx="42" cy="160" r="5" fill="#111" opacity=".85"/>
@@ -230,54 +218,54 @@
     </svg>
   </div>
   <h1>ka<span class="z">Z</span>antip</h1>
-  <p class="tagline">Оранжевая Республика <b>Щастья</b>. Государство, которого нет на карте, — но оно навсегда осталось в сердцах сотен тысяч <b>параdiZеров</b>.</p>
+  <p class="tagline">The Orange Republic of <b>Happiness</b>. A country that exists on no map — yet lives forever in the hearts of hundreds of thousands of <b>paradiZers</b>.</p>
   <div class="hero-badges">
-    <span class="badge">☀️ 24 часа музыки в сутки</span>
-    <span class="badge">🛂 виZа вместо билета</span>
-    <span class="badge">💛 жёлтый чемоданчик = свободный вход</span>
+    <span class="badge">☀️ 24 hours of music a day</span>
+    <span class="badge">🛂 a viZa instead of a ticket</span>
+    <span class="badge">💛 yellow suitcase = free entry</span>
   </div>
   <a class="scroll-hint" href="#history">▼</a>
 </header>
 
 <section id="history" class="reveal">
-  <h2>Как всё зародилось</h2>
-  <p>В 1984 году виндсёрфер <span class="accent">Никита Маршунок</span> открыл для себя мыс Казантип на северо-западе Крыма — место с идеальным ветром. В начале 90-х здесь стали проводить соревнования по виндсёрфингу, а вечеринки после гонок оказались настолько мощными, что быстро затмили сам спорт.</p>
-  <p>Датой рождения фестиваля считается <span class="accent">август 1993 года</span>. Самая легендарная страница ранней истории — рейвы в машинном зале <span class="accent">недостроенной Крымской атомной станции</span> в Щёлкино: «Реактор» стал самым необычным танцполом планеты, а Казантип — «атомной вечеринкой в ядерном реакторе».</p>
-  <div class="quote">Казантип начинался не как бизнес — как побег. Побег из обычной жизни в страну, где всё можно.</div>
-  <p>К концу 90-х фестиваль перерос спорт и превратился в крупнейший электронный опен-эйр Восточной Европы. С 2002 года Республика обосновалась в посёлке <span class="accent">Поповка</span> под Евпаторией — километры песчаного пляжа, десятки танцполов и белые фантастические конструкции прямо на берегу.</p>
+  <h2>How it all began</h2>
+  <p>In 1984, windsurfer <span class="accent">Nikita Marshunok</span> discovered Cape Kazantip in north-western Crimea — a spot with a perfect wind. In the early 90s windsurfing competitions were held there, and the after-race parties turned out to be so powerful that they quickly eclipsed the sport itself.</p>
+  <p>The festival's birthday is considered to be <span class="accent">August 1993</span>. The most legendary page of its early history: raves inside the turbine hall of the <span class="accent">unfinished Crimean nuclear power plant</span> in Shchyolkino. "The Reactor" became the most unusual dancefloor on the planet, and Kazantip — "the atomic party in a nuclear reactor".</p>
+  <div class="quote">Kazantip didn't start as a business — it started as an escape. An escape from ordinary life into a country where everything is allowed.</div>
+  <p>By the late 90s the festival had outgrown the sport and become the biggest electronic open-air of Eastern Europe. From 2002 the Republic settled in the village of <span class="accent">Popovka</span> near Yevpatoria — kilometres of sandy beach, dozens of dancefloors and fantastic white structures right on the shore.</p>
 </section>
 
 <section id="republic" class="reveal">
-  <h2>Республика Z и её политика</h2>
-  <p>В 1999 году Казантип провозгласил себя <span class="accent">государством — Республикой Z</span> (она же «Республика Щастья», именно так, через «Щ»). Бессменным президентом стал Никита Маршунок. Вместо билетов — <span class="accent">виZы</span> (первые стоили всего $3), вместо посетителей — граждане, «параdiZеры».</p>
+  <h2>Republic Z and its politics</h2>
+  <p>In 1999 Kazantip proclaimed itself <span class="accent">a state — Republic Z</span> (also known as the "Republic of Happiness"). Nikita Marshunok became its permanent president. Instead of tickets — <span class="accent">viZas</span> (the first ones cost just $3); instead of visitors — citizens, the "paradiZers".</p>
   <div class="card">
-    <p><b style="color:var(--yellow)">Из Конституции Республики Z — права и обязанности гражданина:</b></p>
+    <p><b style="color:var(--yellow)">From the Constitution of Republic Z — the rights and duties of a citizen:</b></p>
     <ul class="rights">
-      <li><b>Право искать Щастье</b> — и обязанность его найти.</li>
-      <li><b>Право улетать от Щастья</b> — и мечтать о невозможном.</li>
-      <li><b>Обязанность верить в чудеса</b> — без этого виZу могут и не дать.</li>
-      <li><b>Государственный язык</b> — любой, на котором могут объясниться двое граждан: хоть жесты, хоть нотная грамота.</li>
-      <li><b>Государственные цвета</b> — жёлтый и оранжевый. После 2006 года оранжевый стал «оранжевым в чёрный горошек».</li>
+      <li><b>The right to seek Happiness</b> — and the duty to find it.</li>
+      <li><b>The right to fly away from Happiness</b> — and to dream of the impossible.</li>
+      <li><b>The duty to believe in miracles</b> — without it, your viZa may be denied.</li>
+      <li><b>The state language</b> — any language two citizens can communicate in: gestures and musical notation included.</li>
+      <li><b>The state colours</b> — yellow and orange. After 2006, orange became "orange with black polka dots".</li>
     </ul>
   </div>
   <div class="stats">
-    <div class="stat"><div class="num">100 000+</div><div class="lbl">граждан за сезон</div></div>
-    <div class="stat"><div class="num">300+</div><div class="lbl">диджеев каждый год</div></div>
-    <div class="stat"><div class="num">14</div><div class="lbl">танцполов</div></div>
-    <div class="stat"><div class="num">24/7</div><div class="lbl">музыка 2–3 недели подряд</div></div>
+    <div class="stat"><div class="num">100,000+</div><div class="lbl">citizens per season</div></div>
+    <div class="stat"><div class="num">300+</div><div class="lbl">DJs every year</div></div>
+    <div class="stat"><div class="num">14</div><div class="lbl">dancefloors</div></div>
+    <div class="stat"><div class="num">24/7</div><div class="lbl">music for 2–3 weeks straight</div></div>
   </div>
 </section>
 
 <section id="suitcase" class="reveal">
-  <h2>Жёлтый чемоданчик 💛</h2>
-  <p>Главный символ Республики родился из советского фильма <span class="accent">«Приключения жёлтого чемоданчика»</span>. По закону Z, гражданин, явившийся на границу Республики с <span class="accent">идеально жёлтым чемоданом</span>, получал право на бесплатный, безвиZовый вход.</p>
-  <p>Чемодан должен был быть безупречным: настоящий, жёлтый, без изъянов — комиссия проверяла строго. Тысячи людей красили, клеили и мастерили чемоданы, и каждый год очередь у КПП с жёлтыми чемоданчиками была отдельным перформансом.</p>
-  <div class="quote">Жёлтый чемоданчик — это не багаж. Это билет в детство, где чудеса ещё работают.</div>
+  <h2>The Yellow Suitcase 💛</h2>
+  <p>The main symbol of the Republic was born from the Soviet film <span class="accent">"The Adventures of the Yellow Suitcase"</span>. By the law of Z, a citizen arriving at the Republic's border with a <span class="accent">perfectly yellow suitcase</span> earned the right to free, viZa-free entry.</p>
+  <p>The suitcase had to be immaculate: real, yellow, flawless — the commission checked strictly. Thousands of people painted, glued and crafted suitcases, and every year the queue of yellow suitcases at the checkpoint was a performance of its own.</p>
+  <div class="quote">The yellow suitcase is not luggage. It's a ticket back to childhood, where miracles still work.</div>
 </section>
 
 <section id="djs" class="reveal">
-  <h2>Легендарные диджеи</h2>
-  <p>За два десятилетия на танцполах Z отыграли главные имена планеты — от техно-титанов до трансовых легенд:</p>
+  <h2>Legendary DJs</h2>
+  <p>Over two decades, the biggest names on the planet played the dancefloors of Z — from techno titans to trance legends:</p>
   <div class="djs">
     <span class="dj">Carl Cox</span>
     <span class="dj">Armin van Buuren</span>
@@ -298,33 +286,33 @@
     <span class="dj">Adam Freeland</span>
     <span class="dj">Bobina</span>
   </div>
-  <p style="margin-top:24px">И это лишь верхушка: каждый сезон — сотни артистов, круглосуточные сеты и ни одной минуты тишины.</p>
+  <p style="margin-top:24px">And that's just the tip of the iceberg: hundreds of artists every season, round-the-clock sets and not a single minute of silence.</p>
 </section>
 
 <section id="timeline" class="reveal">
-  <h2>Хронология</h2>
+  <h2>Timeline</h2>
   <div class="timeline">
-    <div class="tl-item"><div class="year">1984</div><p>Никита Маршунок открывает мыс Казантип как виндсёрф-спот.</p></div>
-    <div class="tl-item"><div class="year">1993</div><p>Первый фестиваль: гонки виндсёрферов + афтепати, ставшие легендой.</p></div>
-    <div class="tl-item"><div class="year">1995–1999</div><p>Рейвы в реакторном зале недостроенной Крымской АЭС в Щёлкино.</p></div>
-    <div class="tl-item"><div class="year">1999</div><p>Провозглашена Республика Z: конституция, виZы, президент.</p></div>
-    <div class="tl-item"><div class="year">2002</div><p>Переезд в Поповку под Евпаторией — золотая эпоха Республики.</p></div>
-    <div class="tl-item"><div class="year">2013</div><p>Последний Казантип в Крыму. Больше 100 000 параdiZеров.</p></div>
-    <div class="tl-item"><div class="year">2014</div><p>После аннексии Крыма Республика эмигрирует в Анаклию (Грузия).</p></div>
-    <div class="tl-item"><div class="year">2015</div><p>Попытка провести Z в Камбодже (остров Кох Пуос) — отменена властями в последний момент.</p></div>
-    <div class="tl-item"><div class="year">Будущее</div><p>Республика спит. Но республики не умирают — они ждут.</p></div>
+    <div class="tl-item"><div class="year">1984</div><p>Nikita Marshunok discovers Cape Kazantip as a windsurfing spot.</p></div>
+    <div class="tl-item"><div class="year">1993</div><p>The first festival: windsurfing races + afterparties that became legend.</p></div>
+    <div class="tl-item"><div class="year">1995–1999</div><p>Raves in the reactor hall of the unfinished Crimean nuclear plant in Shchyolkino.</p></div>
+    <div class="tl-item"><div class="year">1999</div><p>Republic Z is proclaimed: a constitution, viZas, a president.</p></div>
+    <div class="tl-item"><div class="year">2002</div><p>The move to Popovka near Yevpatoria — the golden era of the Republic.</p></div>
+    <div class="tl-item"><div class="year">2013</div><p>The last Kazantip in Crimea. Over 100,000 paradiZers.</p></div>
+    <div class="tl-item"><div class="year">2014</div><p>After the annexation of Crimea, the Republic emigrates to Anaklia, Georgia.</p></div>
+    <div class="tl-item"><div class="year">2015</div><p>An attempt to hold Z in Cambodia (Koh Puos island) — cancelled by the authorities at the last moment.</p></div>
+    <div class="tl-item"><div class="year">Future</div><p>The Republic sleeps. But republics don't die — they wait.</p></div>
   </div>
 </section>
 
 <section id="hope" class="hope reveal">
-  <h2>Мы верим в возрождение</h2>
-  <p>Казантип — это не место и не бренд. Это состояние, в котором незнакомые люди становятся гражданами одной страны, где обязательно верить в чудеса.</p>
-  <p class="big">Однажды жёлтый чемоданчик снова откроется.<br>И мы будем первыми в очереди на границе. Z ✌️</p>
+  <h2>We believe in the rebirth</h2>
+  <p>Kazantip is not a place and not a brand. It's a state of mind in which strangers become citizens of one country — where believing in miracles is mandatory.</p>
+  <p class="big">One day the yellow suitcase will open again.<br>And we'll be first in line at the border. Z ✌️</p>
 </section>
 
 <footer>
-  <p>kaZantip.org — фанатский сайт-посвящение Республике <span class="z">Z</span>. Сделано с 💛 параdiZером.</p>
-  <p style="margin-top:8px">Не является официальным сайтом фестиваля. Все права на бренд принадлежат их владельцам.</p>
+  <p>kaZantip.org — a fan tribute site to Republic <span class="z">Z</span>. Made with 💛 by a paradiZer.</p>
+  <p style="margin-top:8px">Not the official festival website. All brand rights belong to their owners.</p>
 </footer>
 
 <script>
