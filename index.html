@@ -388,12 +388,25 @@
 </section>
 
 <footer>
+  <p id="fest-age" style="font-size:1.05rem; opacity:1; color:var(--yellow); font-weight:700; margin-bottom:12px"></p>
   <p>kaZantip.org — фанатский сайт-посвящение Республике <span class="z">Z</span>. Сделано с 💛 параdiZером.</p>
   <p style="margin-top:8px">Не является официальным сайтом фестиваля. Все права на бренд принадлежат их владельцам.</p>
   <p style="margin-top:14px; max-width:640px; margin-left:auto; margin-right:auto;">⚠️ Буква <span class="z">Z</span> на этом сайте — исторический символ фестиваля «Казантип» и Республики Z (с 1999 года) и не имеет никакого отношения к войне России против Украины. Мы осуждаем агрессию. Наша Z — про музыку, море и Щастье.</p>
 </footer>
 
 <script>
+  (function () {
+    const birth = new Date(1993, 7, 10); // 10 августа 1993
+    const now = new Date();
+    let years = now.getFullYear() - birth.getFullYear();
+    if (now < new Date(now.getFullYear(), 7, 10)) years--;
+    const m10 = years % 10, m100 = years % 100;
+    const word = (m10 === 1 && m100 !== 11) ? 'год'
+      : (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) ? 'года' : 'лет';
+    document.getElementById('fest-age').textContent =
+      `🎂 Республике Z уже ${years} ${word} — с 10 августа 1993`;
+  })();
+
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
   }, { threshold: 0.12 });
