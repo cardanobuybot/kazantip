@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "techno",
+    "name": "Техно",
+    "name_en": "Techno",
+    "intro": "Главный жанр Казантипа во все периоды — от первых рейвов в «Реакторе» до последних сетов Carl Cox в Поповке. 128–132 BPM, прямой 4/4, минимум мелодий, максимум грува.",
+    "bpm": "128–135",
+    "origin": "Детройт, конец 80-х",
+    "feel": "Прямой, механический, физический. Техно — это не музыка для слушания в наушниках, это музыка для танца через всё тело.",
+    "on_z": "Техно на Z имело много оттенков: от жёсткого немецкого (Umek, Huntemann) до минимал-прочтения (Hawtin, Magda), от итальянского (Carola) до классики (Carl Cox). Техно-сцена Z в 2007–2013 годах была одной из самых сильных в Восточной Европе.",
+    "dj_slugs": ["carl-cox", "sven-vath", "richie-hawtin", "marco-carola", "umek", "dubfire", "magda", "josh-wink", "oliver-huntemann", "nina-kraviz", "maceo-plex"],
+    "tracks": "Carl Cox — I Want You · Sven Väth — L'Esperanza · Marco Carola — Play It Loud · Umek — Lanicor · Nina Kraviz — Ghetto Kraviz"
+  },
+  {
+    "slug": "trance",
+    "name": "Транс",
+    "name_en": "Trance",
+    "intro": "Второй по важности жанр Казантипа — особенно в середине 2000-х, когда транс был главным мировым танцевальным стилем. Вокальные хуки, большие дропы, uplifting-эмоции под крымскими рассветами.",
+    "bpm": "132–140",
+    "origin": "Германия/Нидерланды, начало 90-х",
+    "feel": "Эмоциональный, вертикальный, кинематографичный. Транс строится вокруг длинных нарастаний и больших эмоциональных кульминаций.",
+    "on_z": "Казантип 2004–2010 — золотая эра транса на Z. Приезжали Tiësto, Armin van Buuren, Paul van Dyk, Ferry Corsten, Markus Schulz, Gabriel & Dresden, Bobina. Транс-рассветы на пляже Поповки — одно из самых известных «казантипских моментов».",
+    "dj_slugs": ["tiesto", "armin-van-buuren", "paul-van-dyk", "ferry-corsten", "markus-schulz", "gabriel-dresden", "bobina"],
+    "tracks": "Tiësto — Adagio for Strings · Paul van Dyk — For an Angel · Ferry Corsten — Out of the Blue · Armin van Buuren — Shivers · Bobina — Beautiful Friend"
+  },
+  {
+    "slug": "progressive-house",
+    "name": "Прогрессив-хаус",
+    "name_en": "Progressive House",
+    "intro": "Жанр длинных закатных и рассветных сетов. На Казантипе — звук 20–22 часа у моря или 4–7 утра перед восходом. Главные имена: Hernán Cattáneo, Guy J, Sasha, Digweed.",
+    "bpm": "122–128",
+    "origin": "Великобритания, начало 90-х",
+    "feel": "Текучий, кинематографичный, медленно нарастающий. Главная задача — построить одно долгое путешествие на 2–4 часа без резких перепадов.",
+    "on_z": "Прогрессив-сцена на Z — это Южная Америка (Cattáneo), Великобритания (John Digweed) и Израиль (Guy Gerber). Часто ставили на закатные или рассветные слоты, где у них 3–5 часов работы и неспешное построение драматургии.",
+    "dj_slugs": ["hernan-cattaneo", "gabriel-dresden", "guy-gerber"],
+    "tracks": "Hernán Cattáneo — Soundexile · Gabriel & Dresden — Tracking Treasure Down · Guy J — Lamur"
+  },
+  {
+    "slug": "tech-house",
+    "name": "Тек-хаус",
+    "name_en": "Tech House",
+    "intro": "Солнечный, грувовый, перкуссионный жанр между хаусом и техно. На Казантипе — звук дневных танцполов у моря.",
+    "bpm": "122–126",
+    "origin": "Великобритания, конец 90-х",
+    "feel": "Тёплый, грувовый, танцевальный. Тек-хаус легче техно, но жёстче классического хауса. Главная роль у перкуссии и баса.",
+    "on_z": "Тек-хаус на Z расцвёл в 2007–2013 с приездами Luciano, Marco Carola, Tiefschwarz. Это был звук «ибицких дневных сетов» — расслабленный, но технически точный.",
+    "dj_slugs": ["luciano", "marco-carola", "maceo-plex-tiefschwarz"],
+    "tracks": "Luciano — Celestial · Marco Carola — Rotation · Tiefschwarz — Hotbox"
+  },
+  {
+    "slug": "minimal-techno",
+    "name": "Минимал-техно",
+    "name_en": "Minimal Techno",
+    "intro": "Техно, из которого убрали всё лишнее: мелодии, вокал, украшательства. Остался только грув и щелчки. На Казантип завозил M_nus-клан Хоутина.",
+    "bpm": "125–130",
+    "origin": "Детройт/Берлин, 2000-е",
+    "feel": "Холодный, цифровой, медитативный. Главная идея — что меньше, тем больше: один грув разворачивается 10 минут и перетекает в другой.",
+    "on_z": "Минимал-техно пришёл на Z в 2006–2010 с приездами Хоутина, Magda, Troy Pierce. Для местной аудитории это был шок — после эмоционального транса появилось что-то совсем абстрактное.",
+    "dj_slugs": ["richie-hawtin", "magda"],
+    "tracks": "Plastikman — Spastik · Magda — She's a Dancing Machine · Troy Pierce — Need"
+  },
+  {
+    "slug": "deep-house",
+    "name": "Дип-хаус",
+    "name_en": "Deep House",
+    "intro": "Тёплый, вокальный, душевный жанр. Главный звук пляжных сетов на Z — там, где можно танцевать с мохито в руке.",
+    "bpm": "118–124",
+    "origin": "Чикаго, конец 80-х",
+    "feel": "Тёплый, вокальный, с живыми инструментами. Дип-хаус — это жанр для бассейна, пляжа и рассвета, не для подвала.",
+    "on_z": "Deep house на Z в 2010-е расцвёл благодаря Solomun, Guy Gerber, Tiefschwarz. Это была реакция на жёсткое техно — публике нужно было место, где можно танцевать без агрессии.",
+    "dj_slugs": ["solomun", "guy-gerber", "maceo-plex-tiefschwarz"],
+    "tracks": "Solomun — Love Recycled · Guy Gerber — Timing · Tiefschwarz — On Fire"
+  },
+  {
+    "slug": "electro-house",
+    "name": "Электро-хаус",
+    "name_en": "Electro House",
+    "intro": "Жирный, басовитый, стадионный жанр начала 2010-х. На Казантипе — главный звук больших массовых сетов, которые собирали всю Поповку.",
+    "bpm": "128–132",
+    "origin": "Голландия/Швеция/США, 2007–2008",
+    "feel": "Жирный, басовитый, с большими дропами. Главная цель — максимальная энергия в единицу времени, никаких длинных нарастаний.",
+    "on_z": "Электро-хаус на Z — это Benny Benassi, David Guetta, часть сетов Skrillex. Это был звук, который делал Казантип 2009–2011 годов массовым.",
+    "dj_slugs": ["benny-benassi", "david-guetta"],
+    "tracks": "Benny Benassi — Satisfaction · David Guetta — Memories · Afrojack — Take Over Control"
+  },
+  {
+    "slug": "dubstep",
+    "name": "Дабстеп",
+    "name_en": "Dubstep",
+    "intro": "Британский жанр из Южного Лондона, который взорвал мир в 2009–2011. На Казантипе появился поздно, но успел оставить след благодаря Skrillex и Rusko.",
+    "bpm": "140 (half-time: 70)",
+    "origin": "Южный Лондон, начало 2000-х",
+    "feel": "Половинный ритм, тяжёлый бас-wobble, кинематографичные дропы. Это не музыка для «ровного» танца — это музыца для прыжков.",
+    "on_z": "Дабстеп на Z — молодёжный блок последних сезонов (2010–2012). Skrillex и Rusko приводили аудиторию, которая раньше про Казантип не слышала.",
+    "dj_slugs": ["skrillex", "rusko"],
+    "tracks": "Skrillex — Scary Monsters and Nice Sprites · Rusko — Woo Boost · Nero — Promises"
+  },
+  {
+    "slug": "breakbeat",
+    "name": "Брейкбит",
+    "name_en": "Breakbeat",
+    "intro": "Жанр ломаных ритмов — не 4/4, а сложные синкопические петли. На Казантипе — звук Hybrid и Adam Freeland, альтернатива общему 4/4-марафону.",
+    "bpm": "130–140",
+    "origin": "Великобритания, конец 90-х",
+    "feel": "Ломаный, грувовый, несимметричный. Главная идея — ритм не прямой, а с синкопами, что даёт телу «гулять» в такт по-другому.",
+    "on_z": "Брейкбит на Z — ниша для гурманов. Hybrid играли с живыми оркестровыми партиями, Freeland — с рок-эстетикой. Это был контраст общему техно-мейнстриму.",
+    "dj_slugs": ["hybrid", "adam-freeland"],
+    "tracks": "Hybrid — Finished Symphony · Adam Freeland — We Want Your Soul · Plump DJs — Big Groovy Fernando"
+  },
+  {
+    "slug": "melodic-techno",
+    "name": "Мелодик-техно",
+    "name_en": "Melodic Techno",
+    "intro": "Техно с длинными мелодическими линиями, эмоциональными синтами и часто вокалом. На Казантипе формировался в последние годы Поповки — Boris Brejcha, Maceo Plex.",
+    "bpm": "122–128",
+    "origin": "Германия/Италия, начало 2010-х",
+    "feel": "Эмоциональный, кинематографичный, с длинными арками. Это техно для тех, кто вырос на трансе, но ушёл в более «взрослый» звук.",
+    "on_z": "Мелодик-техно на Z был юн — Казантип закрылся раньше, чем жанр достиг пика (Tale of Us, Mind Against). Но Maceo Plex и Boris Brejcha успели запустить волну на закате Поповки.",
+    "dj_slugs": ["boris-brejcha", "maceo-plex"],
+    "tracks": "Boris Brejcha — Purple Noise · Maceo Plex — Mind on Fire · Stephan Bodzin — Powers of Ten"
+  }
+]
