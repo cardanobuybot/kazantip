@@ -151,11 +151,12 @@
     padding: 8px 20px; font-size: .85rem; color: var(--yellow);
     background: rgba(255,212,0,.06);
   }
-  /* Маленький YouTube-плеер в hero — для прослушиваний: iframe 80px
-     показывает audio-контроллы без видео-окна. */
+  /* Маленький YouTube-плеер в hero — lite-паттерн: сначала наша
+     кнопка-плашка (гарантированно кликается), по тапу подменяется
+     на iframe с autoplay=1. Прослушивание засчитывается после клика. */
   .hero-player {
     margin: 28px auto 0; width: 100%; max-width: 480px;
-    display: flex; flex-direction: column; gap: 8px;
+    display: flex; flex-direction: column; gap: 10px;
     padding: 12px 14px; border: 2px solid var(--yellow); border-radius: 14px;
     background: rgba(255,212,0,.06); text-align: left;
   }
@@ -168,8 +169,29 @@
     margin-left: auto; font-size: .72rem; font-weight: 400;
     color: var(--cream); opacity: .55;
   }
+  .hero-player .play-btn {
+    display: flex; align-items: center; gap: 12px;
+    width: 100%; padding: 10px 14px; cursor: pointer;
+    border: 1px solid rgba(255,212,0,.4); border-radius: 10px;
+    background: rgba(0,0,0,.35); color: var(--yellow);
+    font-size: .9rem; font-weight: 600; text-align: left;
+    transition: background .15s;
+    font-family: inherit;
+  }
+  .hero-player .play-btn:hover,
+  .hero-player .play-btn:focus-visible {
+    background: rgba(255,212,0,.12); outline: none;
+  }
+  .hero-player .play-btn:active { transform: scale(.98); }
+  .hero-player .play-btn .icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--orange); color: var(--black);
+    font-size: 1rem; flex-shrink: 0;
+  }
+  .hero-player .play-btn .label { flex: 1; min-width: 0; }
   .hero-player iframe {
-    width: 100%; height: 80px; border: 0; border-radius: 8px;
+    width: 100%; aspect-ratio: 16/9; border: 0; border-radius: 8px;
     display: block; background: #000;
   }
   .scroll-hint { position: absolute; bottom: 24px; font-size: 1.6rem; color: var(--yellow); animation: bounce 1.6s infinite; }
@@ -327,13 +349,15 @@
       <span>My Sigma Horizon</span>
       <span class="author">на YouTube</span>
     </div>
-    <iframe
-      src="https://www.youtube.com/embed/a-PFUn-wxWc"
-      title="My Sigma Horizon — YouTube"
-      allow="autoplay; encrypted-media; picture-in-picture; clipboard-write"
-      allowfullscreen
-      loading="lazy"
-      referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <button
+      type="button"
+      class="play-btn"
+      id="heroPlayBtn"
+      aria-label="Включить My Sigma Horizon на YouTube"
+      onclick="(function(b){var f=document.createElement('iframe');f.src='https://www.youtube.com/embed/a-PFUn-wxWc?autoplay=1&playsinline=1';f.title='My Sigma Horizon';f.allow='autoplay; encrypted-media; picture-in-picture; clipboard-write';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';b.replaceWith(f);})(this)">
+      <span class="icon" aria-hidden="true">▶</span>
+      <span class="label">Включить · My Sigma Horizon</span>
+    </button>
   </div>
   <a class="scroll-hint" href="#history">▼</a>
 </header>
